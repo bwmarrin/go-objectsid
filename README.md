@@ -1,5 +1,4 @@
 # go-objectsid
-A Go (golang) Utility package for decoding Active Directory objectSID
 ====
 [![Discord Gophers](https://img.shields.io/badge/Discord%20Gophers-%23info-blue.svg)](https://discord.gg/0f1SbxBZjYq9jLBk)
 
