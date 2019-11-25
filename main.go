@@ -8,12 +8,12 @@ type SID struct {
 	RevisionLevel     int
 	SubAuthorityCount int
 	Authority         int
-	SubAuthority      []int
+	SubAuthorities    []int
 }
 
 func (sid SID) String() string {
 	s := fmt.Sprintf("S-%d-%d", sid.RevisionLevel, sid.Authority)
-	for _, v := range sid.SubAuthority {
+	for _, v := range sid.SubAuthorities {
 		s += fmt.Sprintf("-%d", v)
 	}
 	return s
@@ -37,7 +37,7 @@ func Decode(b []byte) SID {
 		for k := 0; k < size; k++ {
 			subAuthority = subAuthority | (int(b[offset+k])&0xFF)<<(8*k)
 		}
-		sid.SubAuthority = append(sid.SubAuthority, subAuthority)
+		sid.SubAuthorities = append(sid.SubAuthorities, subAuthority)
 		offset += size
 	}
 
