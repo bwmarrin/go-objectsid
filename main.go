@@ -19,6 +19,11 @@ func (sid SID) String() string {
 	return s
 }
 
+func (sid SID) RID() int {
+	l := len(sid.SubAuthorities)
+	return sid.SubAuthorities[l-1]
+}
+
 func Decode(b []byte) SID {
 
 	var sid SID
