@@ -33,7 +33,7 @@ This assumes you already have a working Go environment, if not please see
 [this page](https://golang.org/doc/install) first.
 
 ```sh
-go get github.com/bwmarrin/snowflake
+go get github.com/bwmarrin/go-objectsid
 ```
 
 
