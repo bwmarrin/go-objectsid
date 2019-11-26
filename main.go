@@ -9,6 +9,7 @@ type SID struct {
 	SubAuthorityCount int
 	Authority         int
 	SubAuthorities    []int
+	RelativeID        *int
 }
 
 func (sid SID) String() string {

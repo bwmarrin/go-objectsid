@@ -63,7 +63,7 @@ func main() {
 	b64sid := `AQUAAAAAAAUVAAAArC22DNydmGz4WUTnUAQAAA==`
 
 	// Convert the above into binary form. This is the value you would
-	// get from a LDAP quary on AD.
+	// get from a LDAP query on AD.
 	bsid, _ := base64.StdEncoding.DecodeString(b64sid)
 
 	// Decode the binary objectsid into a SID object
